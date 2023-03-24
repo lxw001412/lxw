@@ -1,0 +1,68 @@
+image:
+    registry.comtom.cn:2443/publicimage/docker:18.09.8-dind
+
+stages:
+    - compile_centos7.9
+    - compile_arm64
+
+variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+    DOCKER_AUTH_CONFIG: '{"auths": {"registry.comtom.cn:2443": {"auth": "c3RhcmJjOjFxYXpAV1NY"}}}'
+
+services:
+    - docker:18.09.8-dind
+
+before_script:
+    - COMMIT=${CI_COMMIT_SHA:0:7}
+    - REPO=`if [[ ${CI_COMMIT_REF_NAME:0:6} = "master" ]]; then echo r; elif [[ ${CI_COMMIT_REF_NAME:0:7} = "release" ]]; then echo b; else echo a; fi`;
+    - DATE=`echo $(date +%Y%m%d)`
+
+compile_centos7.9:
+    stage: compile_centos7.9
+    image:
+        registry.comtom.cn:2443/starbc-dev/star-compile-centos7.9:0.3
+    script:
+        - wget http://git.comtom.cn:18000/3rdPartTool/jsoncpp/uploads/c1f5877498684b6e7e0602a8908fc0c9/jsoncpp-1.9.4-centos7.9.tar.gz -P /opt
+        - tar -xzvf /opt/jsoncpp-1.9.4-centos7.9.tar.gz -C /usr/local
+        - export JSONCPP_ROOT=/usr/local/jsoncpp-1.9.4-centos7.9
+        - VERSION=`cat version`
+        - export CENTOS79TARGET=starprotocol_${VERSION}${REPO}-${COMMIT}-centos7.9-${DATE} 
+        - echo ${CENTOS79TARGET} 
+        - source scl_source enable devtoolset-7 && mkdir build && cd build && cmake .. && make && cd ..
+        - mkdir ${CENTOS79TARGET}
+        - mv build/libstarprotocol.* ${CENTOS79TARGET}
+        - mv build/test ${CENTOS79TARGET}
+        - mkdir ${CENTOS79TARGET}/3rd
+        - cp ${JSONCPP_ROOT}/lib/libjsoncpp.so* ${CENTOS79TARGET}/3rd
+        - tar -czvf ${CENTOS79TARGET}.tar.gz ${CENTOS79TARGET}
+    artifacts:
+        expire_in: 1 week
+        when: on_success
+        paths:
+            - starprotocol_*.tar.gz
+
+compile_arm64:
+    stage: compile_arm64
+    image:
+        registry.comtom.cn:2443/starbc-dev/star-compile-arm64:0.3
+    script:
+        - wget http://git.comtom.cn:18000/3rdPartTool/jsoncpp/uploads/6d6a7ebc7f389884fafcbbcf41826f9e/jsoncpp-1.9.4-arm64.tar.gz -P /opt
+        - tar -xzvf /opt/jsoncpp-1.9.4-arm64.tar.gz -C /usr/local
+        - export JSONCPP_ROOT=/usr/local/jsoncpp-1.9.4-arm64
+        - rm starprotocol_*.tar.gz
+        - VERSION=`cat version`
+        - export ARM64TARGET=starprotocol_${VERSION}${REPO}-${COMMIT}-arm64-${DATE}
+        - echo ${ARM64TARGET}
+        - mkdir build && cd build && cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/aarch64.cmake .. && make && cd ..
+        - mkdir ${ARM64TARGET}
+        - mv build/libstarprotocol.* ${ARM64TARGET}
+        - mv build/test ${ARM64TARGET}
+        - mkdir ${ARM64TARGET}/3rd
+        - cp ${JSONCPP_ROOT}/lib/libjsoncpp.so* ${ARM64TARGET}/3rd
+        - tar -czvf ${ARM64TARGET}.tar.gz ${ARM64TARGET}
+    artifacts:
+        expire_in: 1 week
+        when: on_success
+        paths:
+            - starprotocol_*.tar.gz

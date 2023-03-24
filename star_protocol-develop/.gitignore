@@ -1,0 +1,15 @@
+.vs
+Debug
+Release
+*vcxproj.user
+.vscode
+testpyw
+*.exe
+*.bat
+*.conf
+*.log
+.idea
+build
+starprotocol/Release_Project/*
+starprotocol/Debug_Project/*
+

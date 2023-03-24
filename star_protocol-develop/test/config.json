@@ -1,0 +1,15 @@
+{
+	"module": "config",
+	"v": 10,
+	"volume": 100,
+	"multicast": true,
+	"heartbeatInterval": 10,
+	"privilege": 20,
+	"coordinate": {
+		"longitude":"123.34343",
+		"latitude":"34.43432"
+	},
+	"tags": [
+		"hello", "worejowrjeiwofjeiowqfjieowfjeiwfjioewjhgauigheuw", "The htons function takes a 16-bit number in host byte order and returns a 16-bit number in network byte order used in TCP/IP networks (the AF_INET or AF_INET6 address family)."
+	]
+}

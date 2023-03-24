@@ -1,0 +1,421 @@
+{
+  "cmds": [
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 3,
+      "cmd": 2,
+      "msgid": 1,
+      "msg": {
+        "service": "star_forwdsvr",
+        "id": "111",
+        "ipv4": "192.168.112.221",
+        "ipv6": "00000000000000000000000000000000",
+        "port": 7900
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 1,
+      "cmd": 1,
+      "msgid": 1,
+      "msg": {
+        "timestamp": 1624516019,
+        "delay": 100,
+        "hbinterval": 5
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 1,
+      "cmd": 2,
+      "msgid": 2,
+      "msg": {
+        "timestamp": 1624516019,
+        "utc-ms": 1624516019000,
+        "modulever": [
+          {
+            "module": "status",
+            "v": 2
+          },
+          {
+            "module": "config",
+            "v": 3
+          },
+          {
+            "module": "attribute",
+            "v": 4
+          },
+          {
+            "module": "broadcast",
+            "v": 5
+          }
+        ]
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 1,
+      "ack": 0,
+      "topic": 1,
+      "cmd": 3,
+      "msgid": 3,
+      "msg": {
+        "moduledata": [
+          {
+            "module": "broadcast",
+            "v": 4,
+            "url": "rtmp://a/b/c",
+            "volume": 60,
+            "id": "bffa9c913cd0407ab43e5748e1482fda",
+            "title": "billds",
+            "privilege": 100
+          },
+          {
+            "module": "attribute",
+            "v": 4,
+            "version": "1.0.0.3",
+            "address": "192.168.1.105",
+            "product": "音柱"
+          },
+          {
+            "module": "config",
+            "v": 5,
+            "volume": 80,
+            "heartbeatInterval": 8,
+            "multicast": true,
+            "privilege": 30,
+            "coordinate": {
+              "longitude": "123.4343",
+              "latitude": "321.343"
+            },
+            "tags": [
+              "a",
+              "b",
+              "c"
+            ]
+          },
+          {
+            "module": "status",
+            "v": 5,
+            "status": 0,
+            "description": "状态描述"
+          }
+        ]
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 1,
+      "topic": 1,
+      "cmd": 3,
+      "msgid": 3,
+      "msg": null
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 1,
+      "cmd": 4,
+      "msgid": 4,
+      "msg": {
+        "moduleid": [ "status", "config", "attribute", "broadcast" ]
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 1,
+      "topic": 1,
+      "cmd": 4,
+      "msgid": 4,
+      "msg": {
+        "moduledata": [
+          {
+            "module": "broadcast",
+            "v": 4,
+            "url": "rtmp://a/b/c",
+            "volume": 60,
+            "id": "bffa9c913cd0407ab43e5748e1482fda",
+            "title": "billds",
+            "privilege": 100
+          },
+          {
+            "module": "attribute",
+            "v": 4,
+            "version": "1.0.0.3",
+            "address": "192.168.1.105",
+            "product": "音柱"
+          },
+          {
+            "module": "config",
+            "v": 5,
+            "volume": 80,
+            "heartbeatInterval": 8,
+            "multicast": true,
+            "privilege": 30,
+            "coordinate": {
+              "longitude": "123.4343",
+              "latitude": "321.343"
+            },
+            "tags": [
+              "a",
+              "b",
+              "c"
+            ]
+          },
+          {
+            "module": "status",
+            "v": 5,
+            "status": 0,
+            "description": "状态描述"
+          }
+        ]
+      }
+    },
+    {
+      "sn": "",
+      "qos": 0,
+      "ack": 0,
+      "topic": 2,
+      "cmd": 1,
+      "msgid": 5,
+      "msg": {
+        "utc-ms": 1624516019000
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 2,
+      "cmd": 2,
+      "msgid": 6,
+      "msg": {
+        "utc-ms": 1624516019000
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 1,
+      "ack": 0,
+      "topic": 2,
+      "cmd": 3,
+      "msgid": 7,
+      "msg": {
+        "url": "rtmp://192.168.1.6/app/stream"
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 1,
+      "topic": 2,
+      "cmd": 3,
+      "msgid": 7,
+      "msg": {
+        "streamid": 60,
+        "transfermode": 2,
+        "multicastaddr": "192.168.111.222",
+        "mutilcastport": 3232
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 1,
+      "ack": 0,
+      "topic": 2,
+      "cmd": 4,
+      "msgid": 8,
+      "msg": {
+        "streamid": 60
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 1,
+      "topic": 2,
+      "cmd": 4,
+      "msgid": 8,
+      "msg": null
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 1,
+      "ack": 0,
+      "topic": 2,
+      "cmd": 5,
+      "msgid": 9,
+      "msg": {
+        "streamid": 60,
+        "status": 1,
+        "desc": "error description"
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 1,
+      "topic": 2,
+      "cmd": 5,
+      "msgid": 9,
+      "msg": null
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 2,
+      "cmd": 6,
+      "msgid": 10,
+      "msg": {
+        "streamid": 60,
+        "sequencenubmer": 1009
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 5,
+      "cmd": 1,
+      "msgid": 10,
+      "msg": null
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 5,
+      "cmd": 2,
+      "msgid": 10,
+      "msg": {
+        "firmware": [
+          {
+            "hwcode": "123456",
+            "version": "1.2.3.4"
+          },
+          {
+            "hwcode": "22222222",
+            "version": "3.2.3.4"
+          }
+        ]
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 5,
+      "cmd": 3,
+      "msgid": 10,
+      "msg": {
+        "taskid": "0123456789ABCDEF0123456789ABCDEF",
+        "url": "xxxxx",
+        "size": 223,
+        "md5": "0123456789ABCDEF0123456789ABCDEF",
+        "firmware": [
+          {
+            "hwcode": "123456",
+            "version": "1.2.3.4"
+          }
+        ]
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 5,
+      "cmd": 4,
+      "msgid": 10,
+      "msg": {
+        "taskid": "0123456789ABCDEF0123456789ABCDEF",
+        "errorcode": 0,
+        "errormsg": "xxxxx"
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 5,
+      "cmd": 5,
+      "msgid": 10,
+      "msg": {
+        "taskid": "0123456789ABCDEF0123456789ABCDEF"
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 5,
+      "cmd": 6,
+      "msgid": 10,
+      "msg": {
+        "taskid": "0123456789ABCDEF0123456789ABCDEF",
+        "errorcode": 0,
+        "errormsg": "xxxxx"
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 5,
+      "cmd": 7,
+      "msgid": 10,
+      "msg": null
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 5,
+      "cmd": 8,
+      "msgid": 10,
+      "msg": {
+        "taskid": "0123456789ABCDEF0123456789ABCDEF",
+        "progress": 30,
+        "stage": "downloading",
+        "errorcode": 0,
+        "errormsg": "xxxxx"
+      }
+    },
+    {
+      "sn": "150-015-03378-20210526-00001",
+      "qos": 0,
+      "ack": 0,
+      "topic": 4,
+      "cmd": 3,
+      "msgid": 10,
+      "msg": {
+        "type": 0,
+        "reqid": "0123456789ABCDEF0123456789ABCDEF",
+        "setModuleData": {
+          "DEV_IP_CFG_INFO": {
+            "ip": "C0A80169",
+            "ipSubnet": "FFFFFF00",
+            "ipGw": "C0A80101",
+            "ipMDNS": "C0A80101",
+            "ipSDNS": "72727272",
+            "signDHCP": false
+          },
+          "CMD_SRV_IP_CFG_INFO": {
+            "ip": "C0A80106",
+            "port": 7900
+          }
+        }
+      }
+    }
+  ]
+}
