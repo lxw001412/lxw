@@ -1,0 +1,13 @@
+﻿<service>
+  <id>star_pushersvr</id>
+  <name>star_pushersvr</name>
+  <description>star_pushersvr服务</description>
+  <executable>%BASE%\bin\star_pushersvr.exe</executable>
+  <workingdirectory>%BASE%</workingdirectory>
+  <arguments>-c ".\conf\star_pushersvr.json"</arguments>
+  <stoptimeout>10sec</stoptimeout>
+  <onfailure action="restart" delay="10 sec"/>
+  <log mode="none"></log>
+  <logpath>%BASE%\log</logpath>
+  <depend>NlaSvc</depend>
+</service>

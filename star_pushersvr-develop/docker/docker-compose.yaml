@@ -1,0 +1,14 @@
+version: '2.3'
+services:
+  star_pushersvr:
+    image: registry.comtom.cn:2443/starbc-dev/star_pushersvr:latest
+    container_name: star_pushersvr
+    restart: always
+    volumes:
+      - /data/log/star_pushersvr/:/data/log/star_pushersvr/:rw
+      - /etc/localtime:/etc/localtime:ro
+      - type: bind
+        source: /usr/local/comtom/star/conf/star_pushersvr.json
+        target: /usr/local/comtom/star_pushersvr/star_pushersvr.json
+    network_mode: "host"
+

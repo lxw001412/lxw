@@ -1,0 +1,24 @@
+{
+  "log": {
+    "file": "/data/log/star_pushersvr/star_pushersvr.log",
+    "logLevel": "debug",
+    "fileSize": "20",
+    "fileNumber": "3",
+    "enableConsoleLog": "true",
+    "consoleLogLevel": "info"
+  },
+  "callback": {
+    "process": "http://127.0.0.1:18450/openRest/stream/progressCallBack",
+    "filestart": "http://127.0.0.1:18450/openRest/stream/fileStartCallBack",
+    "stop": "http://127.0.0.1:18450/openRest/stream/stopCallBack"
+  },
+  "stream": {
+    "silenceFilePath": "/usr/local/comtom/star_pushersvr/media",
+    "ReconnectTimes": "3",
+    "ReconnectIntervalMilliseconds": "3000",
+    "streamInTimeoutMs": "10000"
+  },
+  "service": {
+    "port": "6329"
+  }
+}
