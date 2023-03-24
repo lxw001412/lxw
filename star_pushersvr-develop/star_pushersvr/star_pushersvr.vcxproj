@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="appConfig\AppConfig.cpp" />
+    <ClCompile Include="appConfig\ConfigMod.cpp" />
+    <ClCompile Include="codec\audioDecoder.cpp" />
+    <ClCompile Include="codec\audioEncoder.cpp" />
+    <ClCompile Include="codec\audioParser.cpp" />
+    <ClCompile Include="codec\audioParserAac.cpp" />
+    <ClCompile Include="codec\audioParserMp3.cpp" />
+    <ClCompile Include="codec\baseDecoder.cpp" />
+    <ClCompile Include="codec\baseEncoder.cpp" />
+    <ClCompile Include="codec\codecDef.cpp" />
+    <ClCompile Include="codec\objlist.cpp" />
+    <ClCompile Include="common\tickcount.cpp" />
+    <ClCompile Include="common\utils.cpp" />
+    <ClCompile Include="httpClient\HttpClient.cpp" />
+    <ClCompile Include="httpClient\HttpClientManage.cpp" />
+    <ClCompile Include="httpClient\HttpClientService.cpp" />
+    <ClCompile Include="httpClient\HttpRequest.cpp" />
+    <ClCompile Include="httpServer\fileStreamJumpHandler.cpp" />
+    <ClCompile Include="httpServer\fileStreamPauseHandler.cpp" />
+    <ClCompile Include="httpServer\fileStreamQueryHandler.cpp" />
+    <ClCompile Include="httpServer\fileStreamResumeHandler.cpp" />
+    <ClCompile Include="httpServer\filestreamStartHandler.cpp" />
+    <ClCompile Include="httpServer\fileStreamStopHandler.cpp" />
+    <ClCompile Include="httpServer\HttpServer.cpp" />
+    <ClCompile Include="httpServer\InterfaceService.cpp" />
+    <ClCompile Include="httpServer\realtimeStreamQueryHandler.cpp" />
+    <ClCompile Include="httpServer\realtimeStreamStartHandler.cpp" />
+    <ClCompile Include="httpServer\realtimeStreamStopHandler.cpp" />
+    <ClCompile Include="httpServer\router.cpp" />
+    <ClCompile Include="httpServer\simpleHandler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="service\Launcher.cpp" />
+    <ClCompile Include="spdlogger\spdlogging.cpp" />
+    <ClCompile Include="stream\AAC_ADTS.cpp" />
+    <ClCompile Include="stream\fileStream.cpp" />
+    <ClCompile Include="stream\realTimeStream.cpp" />
+    <ClCompile Include="stream\streamInImp.cpp" />
+    <ClCompile Include="stream\streamMod.cpp" />
+    <ClCompile Include="stream\streamModInterface.cpp" />
+    <ClCompile Include="stream\streamOutFile.cpp" />
+    <ClCompile Include="stream\streamOutRtmp.cpp" />
+    <ClCompile Include="stream\streamOutRtsp.cpp" />
+    <ClCompile Include="stream\streamTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="appConfig\AppConfig.h" />
+    <ClInclude Include="appConfig\ConfigMod.h" />
+    <ClInclude Include="appConfig\IConfigChangeHandler.h" />
+    <ClInclude Include="codec\audioDecoder.h" />
+    <ClInclude Include="codec\audioEncoder.h" />
+    <ClInclude Include="codec\audioParser.h" />
+    <ClInclude Include="codec\audioParserAac.h" />
+    <ClInclude Include="codec\audioParserMp3.h" />
+    <ClInclude Include="codec\baseDecoder.h" />
+    <ClInclude Include="codec\baseEncoder.h" />
+    <ClInclude Include="codec\codecDef.h" />
+    <ClInclude Include="codec\objlist.h" />
+    <ClInclude Include="codec\objPool.h" />
+    <ClInclude Include="common\autofree.h" />
+    <ClInclude Include="common\messageQueue.h" />
+    <ClInclude Include="common\myTime.h" />
+    <ClInclude Include="common\tickcount.h" />
+    <ClInclude Include="common\utils.h" />
+    <ClInclude Include="httpClient\HttpClient.h" />
+    <ClInclude Include="httpClient\HttpClientManage.h" />
+    <ClInclude Include="httpClient\HttpClientService.h" />
+    <ClInclude Include="httpClient\HttpRequest.h" />
+    <ClInclude Include="httpClient\Module_Interface.h" />
+    <ClInclude Include="httpClient\parse-http-data-base.h" />
+    <ClInclude Include="httpServer\fileStreamJumpHandler.h" />
+    <ClInclude Include="httpServer\fileStreamPauseHandler.h" />
+    <ClInclude Include="httpServer\fileStreamQueryHandler.h" />
+    <ClInclude Include="httpServer\fileStreamResumeHandler.h" />
+    <ClInclude Include="httpServer\filestreamStartHandler.h" />
+    <ClInclude Include="httpServer\fileStreamStopHandler.h" />
+    <ClInclude Include="httpServer\httplib.h" />
+    <ClInclude Include="httpServer\HttpServer.h" />
+    <ClInclude Include="httpServer\httpServerError.h" />
+    <ClInclude Include="httpServer\Ihandler.h" />
+    <ClInclude Include="httpServer\InterfaceService.h" />
+    <ClInclude Include="httpServer\realtimeStreamQueryHandler.h" />
+    <ClInclude Include="httpServer\realtimeStreamStartHandler.h" />
+    <ClInclude Include="httpServer\realtimeStreamStopHandler.h" />
+    <ClInclude Include="httpServer\router.h" />
+    <ClInclude Include="httpServer\simpleHandler.h" />
+    <ClInclude Include="service\define.h" />
+    <ClInclude Include="service\IService.h" />
+    <ClInclude Include="service\Launcher.h" />
+    <ClInclude Include="spdlogger\spdlogging.h" />
+    <ClInclude Include="stream\AAC_ADTS.h" />
+    <ClInclude Include="stream\baseStream.h" />
+    <ClInclude Include="stream\fileStream.h" />
+    <ClInclude Include="stream\realTimeStream.h" />
+    <ClInclude Include="stream\streamDef.h" />
+    <ClInclude Include="stream\streamIn.h" />
+    <ClInclude Include="stream\streamInfo.h" />
+    <ClInclude Include="stream\streamInfoImp.h" />
+    <ClInclude Include="stream\streamInImp.h" />
+    <ClInclude Include="stream\streamMng.h" />
+    <ClInclude Include="stream\streamMod.h" />
+    <ClInclude Include="stream\streamModInterface.h" />
+    <ClInclude Include="stream\streamOut.h" />
+    <ClInclude Include="stream\streamOutFile.h" />
+    <ClInclude Include="stream\streamOutRtmp.h" />
+    <ClInclude Include="stream\streamOutRtsp.h" />
+    <ClInclude Include="stream\streamTest.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{7DFAEACC-D5E9-499B-A61E-8811F96A0B08}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>starpushersvr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>service;appConfig;$(ACE_ROOT);$(JSONCPP_ROOT)/include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ACE_ROOT)/lib; $(JSONCPP_ROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>aced.lib;lib_jsond.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CPPHTTPLIB_USE_POLL;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN64;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>codec;httpServer;httpClient;spdlogger;common;service;appConfig;stream;$(ACE_ROOT);$(JSONCPP_ROOT)/include;$(FFMPEG_ROOT)/include;$(SPDLOG_ROOT)/include;$(RTMPPUSHER_ROOT)/include;$(CURL_ROOT)/include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>libcurl-d_imp.lib;rtmppusherd.lib;lib_jsond.lib;avutil.lib;swresample.lib;avformat.lib;avcodec.lib;aced.lib;lib_jsond.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(RTMPPUSHER_ROOT)/lib64;$(JSONCPP_ROOT)/lib64;$(ACE_ROOT)/lib64;$(FFMPEG_ROOT)/lib;$(CURL_ROOT)/lib64;$(VLD_ROOT)/lib/Win64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>service;appConfig;$(ACE_ROOT);$(JSONCPP_ROOT)/include;$(FFMPEG_ROOT)/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ACE_ROOT)/lib; $(JSONCPP_ROOT)/lib; $(FFMPEG_ROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ace.lib;lib_json.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>CPPHTTPLIB_USE_POLL;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN64;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>codec;httpServer;httpClient;spdlogger;common;service;appConfig;stream;$(ACE_ROOT);$(JSONCPP_ROOT)/include;$(FFMPEG_ROOT)/include;$(SPDLOG_ROOT)/include;$(RTMPPUSHER_ROOT)/include;$(CURL_ROOT)/include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(RTMPPUSHER_ROOT)/lib64;$(JSONCPP_ROOT)/lib64;$(ACE_ROOT)/lib64;$(FFMPEG_ROOT)/lib;$(CURL_ROOT)/lib64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcurl.lib;rtmppusher.lib;lib_json.lib;avutil.lib;swresample.lib;avformat.lib;avcodec.lib;ace.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
